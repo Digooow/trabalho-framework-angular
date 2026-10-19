@@ -1,102 +1,138 @@
-1. Entendendo os Conceitos Básicos (Para vocês)
+Guia Completo do Seminário: Framework Angular
+1. Roteiro da Apresentação (Meta: 30 Minutos)
+Parte 1 — Conhecendo a tecnologia (Seu Papel: Contador de Histórias | ~10 minutos)
 
-O que é um Framework?
-Imagine que você vai construir uma casa. Fazer isso usando apenas Javascript puro seria como fabricar seus próprios tijolos, cimento e ferramentas antes de começar. Usar um framework é como comprar um terreno que já vem com a fundação pronta, paredes levantadas e a tubulação passada. Você só precisa se preocupar em mobiliar e definir a função de cada cômodo. Ele te dá uma estrutura e dita as regras de como a construção deve ser feita.
+    O que é? Um framework web completo (não apenas uma biblioteca ou ferramenta avulsa). Ele dita as regras e a arquitetura de como o código deve ser organizado, funcionando como a fundação completa de uma casa.
 
-O que é o Angular?
-É um framework completo mantido pelo Google para construir aplicações web (sites que funcionam como programas de computador). Ele utiliza o TypeScript, uma linguagem fortemente tipada. Se vocês já estudaram linguagens orientadas a objetos como C#, a transição será muito natural, pois conceitos como injeção de dependências e classes estão no coração do Angular.
-2. Divisão de Tarefas (3 Membros)
+    Para que serve e problemas que resolve? Serve para criar Single Page Applications (SPAs). Resolve o problema do "código espaguete" e da manipulação manual exaustiva do DOM encontrada no desenvolvimento web tradicional, automatizando a sincronização entre os dados e a tela.
 
-Para otimizar o tempo, dividam as responsabilidades da seguinte forma:
+    Quem criou e quando? Criado pelo Google. A primeira versão (AngularJS) surgiu em 2010. Em 2016, foi totalmente reescrito e modernizado para o Angular atual.
 
-    Membro 1 (Você - O Contador de Histórias): Responsável por dominar a teoria. Você vai escrever o roteiro, definir a ordem da apresentação, comparar o Angular com outros frameworks (React e Vue) e explicar o porquê de usá-lo.
+    Onde é utilizado? Em sistemas que exigem alta escalabilidade, segurança e padronização corporativa. Exemplos: Gmail, internet banking, painéis administrativos e plataformas corporativas robustas.
 
-    Membro 2 (O Desenvolvedor): Responsável exclusivo por criar a pequena aplicação prática. Não precisa fazer slides, o foco é 100% em fazer o código rodar e entender como explicar o código na hora.
+    Vantagens: Arquitetura consistente (MVC/Componentes), injeção de dependência nativa, tipagem forte com TypeScript e ecossistema "tudo incluso" (roteamento, formulários e requisições HTTP já vêm de fábrica).
 
-    Membro 3 (O Designer/Revisor): Responsável por montar a apresentação visual, diagramar a arquitetura no quadro ou em diagramas, e testar o software junto com o desenvolvedor para caçar bugs.
+    Limitações: Curva de aprendizado inicial íngreme e tamanho do pacote inicial maior em comparação com bibliotecas mais leves.
 
-3. Tutorial do Software de Demonstração
+    Por que escolher Angular em vez de React/Vue? Pela padronização. Em equipes grandes, o Angular força todos a programarem no mesmo padrão arquitetural, facilitando a entrada de novos desenvolvedores no projeto.
 
-Para extrair as capacidades do Angular sem gastar semanas de desenvolvimento, o Membro 2 deve criar um Painel de Controle (Dashboard) de Tarefas. Isso mostrará os três pilares do Angular: Componentes, Serviços e Roteamento.
+    Por que não usar JavaScript puro? O TypeScript traz o rigor da tipagem forte, autocompletar e detecção de erros em tempo de compilação — características indispensáveis para quem desenvolve sistemas complexos e já está acostumado com back-ends orientados a objetos, como C#.
 
-Passo a passo da configuração (Nível Professor):
+Parte 2 — Preparando o ambiente (Membro 3 | ~5 minutos)
 
-    Instalação dos pré-requisitos: Baixe e instale o Node.js no computador.
+    O que é necessário instalar? Apenas o Node.js (que inclui o gerenciador de pacotes NPM) e uma IDE, como o Visual Studio Code.
 
-    Instalação do Angular CLI: Abra o terminal e digite: npm install -g @angular/cli. Isso instala a ferramenta de linha de comando do Angular.
+    Como criar um projeto do zero?
 
-    Criação do Projeto: No terminal, digite ng new painel-seminario. Quando perguntar sobre routing, digite y (yes). Escolha CSS normal.
+        Comando 1: npm install -g @angular/cli (instala o motor do Angular no computador).
 
-    Abrindo o ambiente: Abra o projeto gerado no Visual Studio Code para começar a editar. O terminal integrado do VS Code será o seu melhor amigo.
+        Comando 2: ng new nome-do-projeto (gera toda a estrutura base automaticamente).
 
-    Rodando o servidor: No terminal do VS Code, digite ng serve -o. Isso vai abrir o navegador e atualizar a tela automaticamente a cada vez que o código for salvo.
+    Principais arquivos e pastas (Dissecando a Arquitetura):
 
-    Criando os componentes (O poder do Angular):
+        src/: A pasta raiz onde o código-fonte da aplicação vive.
 
-        Digite ng generate component cabecalho
+        src/app/: O coração do sistema, onde ficam os Componentes (HTML, CSS e TypeScript).
 
-        Digite ng generate component lista-tarefas
-        O Angular cria automaticamente os arquivos HTML, CSS e TypeScript separadinhos para cada pedaço da tela.
+        angular.json: O arquivo mestre que gerencia as configurações de compilação do projeto.
 
-Na apresentação, o Membro 2 vai abrir o VS Code, mostrar como o HTML está separado da lógica (TypeScript) e como um componente se comunica com o outro na tela.
-4. Estrutura da Apresentação Visual (Slides)
+        package.json: A lista de dependências externas.
 
-Na hora de montar a apresentação, estruturem o material com um layout profissional e apliquem um tema escuro para reduzir o cansaço visual e destacar trechos de código. Lembrem-se de exportar o arquivo final em formato PDF, garantindo que o escalonamento visual fique perfeito e a formatação não quebre em nenhum projetor ou computador da universidade.
+    Como executar no navegador? O comando ng serve compila a aplicação e levanta um servidor local (geralmente em localhost:4200).
 
-Estrutura dos Slides:
+Parte 3 — Colocando a mão na massa (Membro 2 | ~10 minutos)
 
-    Slide 1: Capa (Tema, Nome do Framework, Nomes dos Alunos).
+    Apresentação do Exemplo: Mostrar o "Painel de Tarefas" (Dashboard) rodando limpo no navegador.
 
-    Slide 2: O que é um Framework? (Metáfora da construção).
+    Explicação do Código:
 
-    Slide 3: O que é o Angular? (História, criado pelo Google, focado em grandes projetos).
+        Abrir o Visual Studio Code.
 
-    Slide 4: Angular vs Javascript Puro (Por que não usar apenas JS? Falar sobre manutenibilidade e produtividade).
+        Explicar a anatomia de um Componente Angular: mostrar como ele isola a lógica em uma classe TypeScript (.ts), a estrutura visual no .html e o estilo no .css.
 
-    Slide 5: Angular vs Outros (Comparação rápida com React: Angular já vem com tudo pronto de fábrica, React você precisa montar as peças).
+        Mostrar o Data Binding: Como uma variável declarada na classe TypeScript é impressa na tela HTML usando chaves duplas {{ variavel }}.
 
-    Slide 6: Pontos Fortes e Fracos (Curva de aprendizado alta vs Organização impecável para equipes grandes).
+    Modificação ao Vivo:
 
-    Slide 7: Quando usar? (Sistemas empresariais, dashboards, plataformas bancárias).
+        Alterar uma cor no CSS ou um texto na variável do TypeScript.
 
-    Slide 8: A Arquitetura (Mostrar um diagrama simples de Componentes e Serviços).
+        Salvar o arquivo e mostrar o navegador aplicando a alteração instantaneamente, sem necessidade de atualizar a página (Hot Reload).
 
-    Slide 9: Demonstração Prática (Hora de mostrar o software rodando).
+Parte 4 — Conclusão (Todo o Grupo | ~5 minutos)
 
-    Slide 10: Conclusão e Dúvidas.
+    O que muda em relação a HTML, CSS e JavaScript puros? A mudança do paradigma imperativo (dizer exatamente como a tela deve mudar) para o declarativo (dizer o que a tela deve mostrar com base no estado dos dados).
 
-5. TODO List Completa (Checklist da Semana)
+    Em que tipo de projeto seria útil? Dashboards complexos, sistemas integradores, ERPs e aplicações que exigem manutenção a longo prazo por times rotativos.
 
-Dias 1 e 2: Estruturação
+    Maior facilidade encontrada: A geração automática de arquivos estruturados através dos comandos do Angular CLI (ng generate).
 
-    [ ] Membro 1: Pesquisar a fundo a diferença entre Angular, React e Vue.
+    Maior dificuldade encontrada: Compreender o fluxo inicial de interligação dos módulos e a adaptação à sintaxe do TypeScript.
 
-    [ ] Membro 1: Escrever o primeiro rascunho do roteiro da história (usando os tópicos do slide).
+2. Documentação e Tutorial (Desenvolvimento do Software)
 
-    [ ] Membro 2: Instalar Node.js, Angular CLI e rodar o projeto inicial vazio no VS Code.
+Este é o guia técnico para o Membro 2 desenvolver o Painel de Tarefas antes da apresentação.
 
-    [ ] Membro 3: Criar o esqueleto da apresentação visual, aplicar a identidade visual escura e compartilhar com o grupo.
+    Geração do Projeto:
 
-Dias 3 e 4: Desenvolvimento e Refinamento
+        Abra o terminal do VS Code e execute: ng new painel-seminario
 
-    [ ] Membro 2: Criar os componentes do "Dashboard" (Cabeçalho e Lista).
+        Entre na pasta: cd painel-seminario
 
-    [ ] Membro 2: Fazer a lógica em TypeScript para adicionar e remover itens falsos da lista.
+    Criação dos Componentes:
 
-    [ ] Membro 1: Revisar o roteiro e definir exatamente em qual slide cada frase será dita.
+        Execute: ng generate component lista-tarefas (Isso cria automaticamente os arquivos de lógica, visual e testes).
 
-    [ ] Membro 3: Preencher os slides com as informações resumidas do Membro 1.
+    Lógica do Componente (lista-tarefas.component.ts):
 
-Dia 5: Integração
+        Dentro da classe, crie um array tipado: tarefas: string[] = ['Estudar Angular', 'Fazer os slides', 'Apresentar seminário'];
 
-    [ ] Membro 3: Exportar a apresentação finalizada para PDF e colocar em um pendrive/nuvem.
+        Crie uma função simples: adicionarTarefa(novaTarefa: string) { this.tarefas.push(novaTarefa); }
 
-    [ ] Grupo: Juntar a teoria com a prática. Definir a transição da sua fala (história) para a parte técnica do Membro 2 (código).
+    Integração Visual (lista-tarefas.component.html):
 
-Dia 6 e 7: Ensaios
+        Use a diretiva estrutural *ngFor (o laço de repetição do Angular) para renderizar a lista:
+        <li *ngFor="let tarefa of tarefas">{{ tarefa }}</li>
 
-    [ ] Grupo: Ensaiar a apresentação cronometrando o tempo.
+    Exibição Principal:
 
-    [ ] Membro 2: Testar se o código roda perfeitamente do zero (simular a hora da apresentação).
+        Vá no arquivo app.component.html, apague tudo que vem como padrão e coloque apenas a tag do novo componente: <app-lista-tarefas></app-lista-tarefas>
 
-    [ ] Grupo: Preparar respostas para perguntas difíceis que o professor possa fazer (ex: "Qual a desvantagem do Angular?" - R: "Curva de aprendizado íngreme e tamanho inicial do projeto maior").
+3. Divisão Ágil de Tarefas
+
+Como o prazo é curto, façam sincronizações diárias de 10 minutos (Daily Standup) para garantir que ninguém está travado.
+
+    Membro 1 (Você - Teoria e Narrativa): Responsável por dominar as respostas da Parte 1 e 4. Deve elaborar o discurso de transição entre a sua contação de história e a entrada da demonstração técnica.
+
+    Membro 2 (Desenvolvimento): Focado exclusivamente em criar, entender e explicar o código do Painel de Tarefas no VS Code (Parte 3).
+
+    Membro 3 (Design e Setup): Responsável por criar os slides, estruturar as informações da Parte 2 e documentar o processo de instalação para apresentar.
+
+4. TODO List da Semana
+
+    Dia 1-2: Preparação Base
+
+        [ ] Membro 1: Roteirizar o texto exato da Parte 1, focando em analogias claras.
+
+        [ ] Membro 2: Instalar dependências (Node, Angular CLI) e gerar o projeto base.
+
+        [ ] Membro 3: Definir a identidade visual dos slides (Priorizar tema escuro para conforto visual e destacar trechos de código).
+
+    Dia 3-4: Produção
+
+        [ ] Membro 1: Roteirizar a Parte 4 (Conclusão) junto com a equipe.
+
+        [ ] Membro 2: Finalizar o código do Painel de Tarefas e testar a modificação ao vivo que será feita na aula.
+
+        [ ] Membro 3: Preencher os slides com as informações resumidas (sem textos longos na tela).
+
+    Dia 5-6: Integração e Refinamento
+
+        [ ] Membro 3: Exportar a apresentação finalizada obrigatoriamente em formato PDF para evitar problemas de escalonamento visual ou fontes quebradas no computador da universidade.
+
+        [ ] Todos: Passagem de bastão (ensaiar o momento exato em que um passa a fala para o outro).
+
+    Dia 7: Ensaio Final
+
+        [ ] Todos: Ensaiar com cronômetro para cravar os 30 minutos de forma confortável.
+
+        [ ] Membro 2: Testar se o ambiente local do Angular levanta corretamente offline ou na rede da universidade.
