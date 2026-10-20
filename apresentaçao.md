@@ -14,3 +14,8 @@ Como evoluiu e onde é utilizada?
 O que é necessario instalar para começar?
 -Para instalar o Angular, é necessario instalar o node.js e a instalação do Angular em npm no terminal
 
+Como criar um projeto do zero?
+-Para criar um projeto Angular é necessario rodar o comando "ng new <nome desejado>", escolher se a API tera uma URL ou multiplas e qual pré-processador CSS que você usará. Após isso o terminal gerará todas as dependencias e arquivos necessarios para iniciar o projeto
+
+Quais são os principais arquivos e pastas do projeto?
+
