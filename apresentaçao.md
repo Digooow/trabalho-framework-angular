@@ -18,4 +18,6 @@ Como criar um projeto do zero?
 -Para criar um projeto Angular é necessario rodar o comando "ng new <nome desejado>", escolher se a API tera uma URL ou multiplas e qual pré-processador CSS que você usará. Após isso o terminal gerará todas as dependencias e arquivos necessarios para iniciar o projeto
 
 Quais são os principais arquivos e pastas do projeto?
-
+-as pastas mais importantes são: 
+src = onde guarda as pastas e arquivos mais importantes
+app = onde estão os componentes
