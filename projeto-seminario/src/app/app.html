@@ -14,7 +14,7 @@
   </header>
 
   <main class="main-content">
-    
+
     <!-- BARRA GLOBAL DE STATUS DO COMPONENTE -->
     <div class="presentation-banner">
       <div class="banner-pill">
@@ -226,7 +226,7 @@
               <div class="task-item" [class.done]="t.concluida">
                 <input type="checkbox" [checked]="t.concluida" (change)="alternarConclusao(t)">
                 <span class="task-title">{{ t.titulo }}</span>
-                
+
                 @switch (t.prioridade) {
                   @case ('ALTA') {
                     <span class="badge badge-danger">ALTA</span>
@@ -335,7 +335,7 @@
           <form [formGroup]="cadastroForm" (ngSubmit)="submeterCadastro()" class="reactive-form">
             <div class="form-row">
               <label>Nome Completo (Mínimo 3 letras):</label>
-              <input type="text" formControlName="nome" placeholder="Ex: Rodrigo Santos">
+              <input type="text" formControlName="nome" placeholder="Ex: Fernando Santos">
               @if (cadastroForm.get('nome')?.touched && cadastroForm.get('nome')?.invalid) {
                 <span class="error-msg">O nome é obrigatório e deve ter ao menos 3 caracteres.</span>
               }

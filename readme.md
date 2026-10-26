@@ -2,7 +2,7 @@
 
 ## 1. Roteiro da Apresentação (Meta: 30 Minutos)
 
-### Parte 1 — Conhecendo a tecnologia (Membro 1: Rodrigo | ~10 minutos)
+### Parte 1 — Conhecendo a tecnologia (Membro 1 | ~10 minutos)
 * **O que é?** Um framework web completo mantido pelo Google. Diferente de uma simples biblioteca visual, ele fornece a fundação arquitetural completa da aplicação ("Batteries Included").
 * **Para que serve e problemas que resolve?** Criação de Single Page Applications (SPAs) de alta escalabilidade. Resolve o "código espaguete" e o gargalo de manipulação manual do DOM comum no desenvolvimento tradicional com Vanilla JS.
 * **Quem criou e quando?** Criado pelo Google. A versão original (AngularJS) nasceu em 2010. Em 2016, foi completamente reescrito e modernizado para o Angular atual com TypeScript por padrão.
