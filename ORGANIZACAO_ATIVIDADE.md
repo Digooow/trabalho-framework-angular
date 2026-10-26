@@ -22,7 +22,7 @@ Para garantir que todos os 3 integrantes tenham protagonismo equilibrado, a carg
 
 | Integrante | Papel Principal | Responsabilidades Chave |
 | :--- | :--- | :--- |
-| **Membro 1 ** | *Narrador Técnico & Teórico* | Introdução do seminário, contextualização histórica (AngularJS vs Angular 2+), posicionamento de mercado (vs React/Vue/Vanilla JS), vantagens corporativas e co-condução da conclusão. |
+| **Membro 1** | *Narrador Técnico & Teórico* | Introdução do seminário, contextualização histórica (AngularJS vs Angular 2+), posicionamento de mercado (vs React/Vue/Vanilla JS), vantagens corporativas e co-condução da conclusão. |
 | **Membro 2** | *Desenvolvedor Lead* | Preparação do ambiente (Node.js e Angular CLI), arquitetura de arquivos do projeto, codificação prática da SPA interativa (*Angular Interactive Showcase & Toolkit*), explicação do TypeScript/HTML/CSS e execução do *Live Demo*. |
 | **Membro 3** | *Designer & Relator* | Estruturação e design dos slides em PDF (tema escuro e visual limpo), boas práticas do Angular, controle do cronômetro de 30 minutos e encerramento com considerações finais. |
 
