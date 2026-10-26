@@ -19,5 +19,28 @@ Como criar um projeto do zero?
 
 Quais são os principais arquivos e pastas do projeto?
 -as pastas mais importantes são: 
-src = onde guarda as pastas e arquivos mais importantes
-app = onde estão os componentes
+src = é onde ficara toda a API, sendo a pasta central e mais importante do projeto
+app = onde se encontra todos os componentes, serviços e módulos da API
+assets = (geralmente criada posteriormente) é onde se encontra os arquivos estaticos como imagens
+environments = contem arquivos de configuração especifica pra cada ambiente
+a partir disso existem arquivos especificos para diferentes funções como:
+app (html e css) = onde será construida o esqueleto html e a estilização css da API
+app.ts = onde será misturado os elementos html com os componentes
+
+Como executar a aplicação no navegador?
+-Para executar a aplicação no navegador, basta executar o comando "ng serve" e abrir o link no navegador padrão ou na EPI que esta sendo utilizada
+
+Qual foi a maior facilidade encontrada?
+-a maior facilidade foi a organizaçao entre as pastas, a liberdade de modificação dos site e dos componentes e a pré criação de multiplos serviços necessarios para a funcionalidade da API
+
+Qual foi a maior dificuldade?
+-a maior dificuldade foi a falta de explicação sobre o propósito das pastas pré criadas
+
+Em que tipo de projeto a tecnologia seria útil?
+-o framework Angular apresenta uma adequação maior pra criação de sites web principalmente focados em vendas
+
+O que muda em relação a HTML, CSS e JavaScript puros?
+-Além da atualização automatica no site, o Angular fornece testes pré criados, abertura de servidores e funções e linguagem adaptada e complementada
+
+
+
