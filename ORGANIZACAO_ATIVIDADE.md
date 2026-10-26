@@ -22,7 +22,7 @@ Para garantir que todos os 3 integrantes tenham protagonismo equilibrado, a carg
 
 | Integrante | Papel Principal | Responsabilidades Chave |
 | :--- | :--- | :--- |
-| **Membro 1 (Rodrigo)** | *Narrador Técnico & Teórico* | Introdução do seminário, contextualização histórica (AngularJS vs Angular 2+), posicionamento de mercado (vs React/Vue/Vanilla JS), vantagens corporativas e co-condução da conclusão. |
+| **Membro 1 ** | *Narrador Técnico & Teórico* | Introdução do seminário, contextualização histórica (AngularJS vs Angular 2+), posicionamento de mercado (vs React/Vue/Vanilla JS), vantagens corporativas e co-condução da conclusão. |
 | **Membro 2** | *Desenvolvedor Lead* | Preparação do ambiente (Node.js e Angular CLI), arquitetura de arquivos do projeto, codificação prática da SPA interativa (*Angular Interactive Showcase & Toolkit*), explicação do TypeScript/HTML/CSS e execução do *Live Demo*. |
 | **Membro 3** | *Designer & Relator* | Estruturação e design dos slides em PDF (tema escuro e visual limpo), boas práticas do Angular, controle do cronômetro de 30 minutos e encerramento com considerações finais. |
 
@@ -35,7 +35,7 @@ Para garantir que todos os 3 integrantes tenham protagonismo equilibrado, a carg
 A apresentação segue uma divisão estrita de 3 blocos de 10 minutos:
 
 ```
-[00:00 - 10:00] Bloco 1: Conhecendo a Tecnologia (Membro 1 - Rodrigo)
+[00:00 - 10:00] Bloco 1: Conhecendo a Tecnologia (Membro 1)
 [10:00 - 20:00] Bloco 2: Ambiente & Demonstração Prática (Membro 2)
 [20:00 - 30:00] Bloco 3: Boas Práticas, Arquitetura & Conclusão (Membro 3 + Grupo)
 ```
@@ -44,10 +44,10 @@ A apresentação segue uma divisão estrita de 3 blocos de 10 minutos:
 
 | Minutos | Bloco / Responsável | Tópicos Abordados |
 | :--- | :--- | :--- |
-| **00:00 - 02:00** | Abertura (*Rodrigo*) | Apresentação da equipe, tema e introdução ao problema das aplicações web antigas (MPAs e recarregamento constante). |
-| **02:00 - 05:00** | Origem e História (*Rodrigo*) | O surgimento do AngularJS (2010, Miško Hevery / Google) e a virada para o Angular 2+ (2016, reescrita total com TypeScript). |
-| **05:00 - 08:00** | O Que É e Pilares (*Rodrigo*) | Framework *"Batteries Included"*, tipagem forte com TypeScript, Injeção de Dependências, Componentes e Data Binding. |
-| **08:00 - 10:00** | Mercado e Comparativo (*Rodrigo*) | Angular vs React vs Vue; Angular vs Vanilla JS; Casos de uso enterprise (Google, Microsoft, bancos). **Passagem de bastão para o Membro 2.** |
+| **00:00 - 02:00** | Abertura (*Membro 1*) | Apresentação da equipe, tema e introdução ao problema das aplicações web antigas (MPAs e recarregamento constante). |
+| **02:00 - 05:00** | Origem e História (*Membro 1*) | O surgimento do AngularJS (2010, Miško Hevery / Google) e a virada para o Angular 2+ (2016, reescrita total com TypeScript). |
+| **05:00 - 08:00** | O Que É e Pilares (*Membro 1*) | Framework *"Batteries Included"*, tipagem forte com TypeScript, Injeção de Dependências, Componentes e Data Binding. |
+| **08:00 - 10:00** | Mercado e Comparativo (*Membro 1*) | Angular vs React vs Vue; Angular vs Vanilla JS; Casos de uso enterprise (Google, Microsoft, bancos). **Passagem de bastão para o Membro 2.** |
 | **10:00 - 12:00** | Setup e Estrutura (*Membro 2*) | Pré-requisitos (Node.js, NPM, Angular CLI), comandos de geração e anatomia dos arquivos (`src/app`, `angular.json`). |
 | **12:00 - 15:00** | Dissecando o Código (*Membro 2*) | Apresentação da SPA interativa autoexplicativa (*Angular Interactive Showcase*), módulos de Data Binding, Signals, Control Flow moderno (`@if`, `@for`, `@switch`), Pipes nativos e Injeção de Dependências. |
 | **15:00 - 18:00** | Live Demo (*Membro 2*) | Navegação no painel em execução, demonstração dos **Cards Dinâmicos** reagindo aos inputs, botões e calculadoras reativas com Signals em tempo real. |
@@ -59,7 +59,7 @@ A apresentação segue uma divisão estrita de 3 blocos de 10 minutos:
 
 ---
 
-## 🎤 4. Roteiro Narrativo e Argumentação (Guia do Apresentador: Rodrigo)
+## 🎤 4. Roteiro Narrativo e Argumentação (Guia do Apresentador)
 
 Este roteiro serve como mapa mental para a fala inicial do Bloco 1.
 
