@@ -38,6 +38,7 @@ Qual foi a maior dificuldade?
 
 Em que tipo de projeto a tecnologia seria útil?
 -o framework Angular apresenta uma adequação maior pra criação de sites web principalmente focados em vendas
+e paginas unicas (SPA's)
 
 O que muda em relação a HTML, CSS e JavaScript puros?
 -Além da atualização automatica no site, o Angular fornece testes pré criados, abertura de servidores e funções e linguagem adaptada e complementada
