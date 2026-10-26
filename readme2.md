@@ -1,87 +1,78 @@
-# 📊 Kafka Event Stream Dashboard (Painel de Monitoramento)
+# 🌐 Angular Interactive Showcase & Toolkit (SPA Didática)
+
+![Angular](https://img.shields.io/badge/Angular-v21-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-Strict-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-Scoped-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 ## 📌 Visão Geral do Software
-O **Kafka Event Stream Dashboard** é uma aplicação web *Single Page Application* (SPA) desenvolvida para simular um console de operações e monitoramento em tempo real de uma **Arquitetura Orientada a Eventos (EDA)** baseada em Apache Kafka.
+O **Angular Interactive Showcase & Toolkit** é uma *Single Page Application* (SPA) interativa e autoexplicativa desenvolvida especificamente para a apresentação técnica sobre o framework **Angular**.
 
-O objetivo principal deste software é demonstrar a capacidade do framework **Angular** em lidar com atualizações de estado de alta frequência (simulando a chegada de milhares de mensagens por segundo) e refletir essas mudanças instantaneamente na interface do usuário (UI) sem causar travamentos de renderização (gargalos no DOM).
+Em vez de focar em uma regra de negócio externa e genérica, a aplicação funciona como um **painel de controle vivo das ferramentas do Angular**: cada bloco contém botões e formulários interativos que, logo na sequência, alimentam um **Card Dinâmico de Diagnóstico** que reflete o funcionamento interno do motor de renderização e *Data Binding* do Angular.
 
 ---
 
 ## 🛠️ Stack Tecnológica
-* **Frontend Framework:** Angular (v15+)
-* **Linguagem Principal:** TypeScript
-* **Estruturação e Estilização:** HTML5 e CSS3 (Design responsivo e componentizado)
-* **Ambiente de Execução:** Node.js (utilizado pelo Angular CLI para compilação e servidor de desenvolvimento)
-* **Domínio de Negócio (Simulado):** Apache Kafka (Brokers, Tópicos, Throughput, Consumer Lag)
+* **Frontend Framework:** Angular 21 (Arquitetura moderna de *Standalone Components*)
+* **Linguagem:** TypeScript com tipagem estática rigorosa
+* **Reatividade:** Signals nativos (`signal`, `computed`) combinados com *Change Detection*
+* **Marcação e Estilo:** HTML5 semântico e CSS3 modular encapsulado
+* **Serviços Globais:** Injeção de dependências (`@Injectable`) com padrão Singleton
 
 ---
 
-## 🚀 Funcionalidades do Dashboard
+## 🚀 Funcionalidades e Cards Autoexplicativos
 
-O painel foi projetado para atuar como uma central de controle para Engenheiros de Dados e SREs (Site Reliability Engineers). Ele possui as seguintes funcionalidades:
+A aplicação cobre os 6 pilares essenciais do ecossistema Angular:
 
-1. **Monitoramento de Métricas Globais (Cards Superiores):**
-   * **Brokers Ativos:** Quantidade de servidores Kafka rodando no cluster.
-   * **Total de Tópicos:** Número de canais de mensagens abertos.
-   * **Throughput (MB/s):** Taxa de transferência de dados em tempo real.
-   * **Consumer Lag:** Quantidade de mensagens acumuladas que os consumidores ainda não conseguiram processar. (Muda visualmente se o limite de segurança for ultrapassado).
+1. **Os 4 Pilares de Data Binding:**
+   * **Interpolação `{{ }}`:** Campo de digitação de texto com espelhamento instantâneo no HTML.
+   * **Property & Style Binding `[disabled]` / `[style.fontSize.px]`:** Controle de atributos nativos e estilos dinâmicos pelo TypeScript.
+   * **Event Binding `(click)`:** Captura de eventos do usuário com contador de execuções.
+   * **Two-Way Data Binding `[(ngModel)]`:** Sincronização bidirecional em tempo real.
+   * **Card Dinâmico de Binding:** Exibe o estado em memória da classe TypeScript e o reflexo nos nós do DOM.
 
-2. **Listagem de Tópicos em Tempo Real (Tabela):**
-   * Exibe uma lista de tópicos críticos da arquitetura (ex: `pedidos-vendas-stream`, `logs-autenticacao`).
-   * Mostra o número de partições de cada tópico.
-   * Atualiza a taxa de mensagens processadas por segundo dinamicamente.
-   * Exibe o *Status* de saúde do tópico (Saudável, Alerta, Crítico) com badges coloridos.
+2. **Reatividade com Signals (Fine-Grained Reactivity):**
+   * Calculadora interativa de compra com seletores de quantidade, chips de preço e cupons de desconto.
+   * **Card Dinâmico de Signals:** Mostra os nós computados reativamente (`subtotal`, `desconto` e `totalFinal`) que são atualizados cirurgicamente sem re-renderizar a página inteira.
 
-3. **Controle de Estado do Cluster:**
-   * Botão de ação para **Rebalancear Cluster**, que altera o estado global da aplicação, simulando uma manutenção corretiva que zera o *Consumer Lag* e estabiliza a rede.
+3. **Diretivas Modernas de Controle de Fluxo (`@for`, `@if`, `@switch`, `@empty`):**
+   * Adição e remoção de itens em uma lista de tarefas.
+   * Filtro por prioridade (Alta, Média, Baixa) com visualização condicional via `@switch`.
+   * **Card Dinâmico Estrutural:** Demonstra a manipulação eficiente de elementos no DOM pelo novo compilador do Angular.
 
----
+4. **Pipes Nativos de Transformação:**
+   * Formatação declarativa no HTML de texto (`uppercase`, `lowercase`), valores financeiros (`currency:'BRL'`), datas (`date:'fullDate'`) e inspeção de objetos com `json`.
+   * **Card Dinâmico de Pipes:** Tabela comparativa entre a variável bruta no TypeScript e o resultado transformado pelo Pipe na tela.
 
-## 🧠 Conceitos de Angular Aplicados no Código
+5. **Formulários Reativos & Validação Rigorosa:**
+   * Formulário com `FormGroup`, campos obrigatórios, tamanho mínimo e formato de e-mail.
+   * **Card Dinâmico de Validação:** Inspeciona as propriedades `.valid`, `.dirty`, `.touched` e o objeto `.value` em tempo real.
 
-Este software foi construído especificamente para extrair o máximo das funcionalidades nativas do Angular. Para a equipe entender o que está acontecendo por baixo dos panos, aqui estão os pilares utilizados:
-
-* **Componentização (`@Component`):** A tela inteira é encapsulada no componente `MonitoramentoKafkaComponent`, garantindo que a lógica (TypeScript), o visual (HTML) e o estilo (CSS) operem de forma isolada e previsível.
-* **Property Binding (`[ngClass]`, `[class.warning]`):** O CSS da aplicação é injetado dinamicamente pelo Angular. Se o status de um tópico muda para "CRITICO", o Angular automaticamente adiciona a classe CSS correspondente para mudar a cor do texto sem precisarmos usar `document.getElementById()`.
-* **Event Binding (`(click)`):** Quando o usuário clica em "Rebalancear Cluster", o Angular intercepta a ação do HTML e dispara o método `reiniciarCluster()` dentro do TypeScript.
-* **Diretivas Estruturais (`*ngFor`):** A tabela de tópicos não foi escrita linha por linha. Usamos o `*ngFor` para iterar sobre o array de objetos `topicos`. Se um novo tópico for adicionado no TypeScript, o HTML se redesenha sozinho.
-* **Lifecycle Hooks (`ngOnInit`, `ngOnDestroy`):** Usamos o `ngOnInit` para engatilhar a simulação de tráfego de rede no exato milissegundo em que o painel é renderizado na tela. O `ngOnDestroy` garante que a simulação seja interrompida se o usuário fechar o painel, evitando vazamento de memória.
-* **Pipes (`| number`):** Usado diretamente no HTML para formatar os números gigantes de mensagens por segundo de `15400` para `15.400`, mantendo o padrão de leitura humano sem poluir a lógica do sistema.
-
----
-
-## 📖 Dicionário de Negócio: O que é o Kafka?
-*(Guia rápido para os membros da equipe que não estão cursando a disciplina de Event-Driven Architecture)*
-
-Para apresentar este software com propriedade, é necessário entender os termos exibidos na tela:
-* **Apache Kafka:** É um sistema de mensageria que permite que diferentes programas conversem entre si em altíssima velocidade. 
-* **Tópico:** É como se fosse um grupo do WhatsApp. Um sistema envia uma mensagem (ex: "Nova compra realizada") para um tópico, e outros sistemas que estão escutando esse tópico recebem a mensagem instantaneamente.
-* **Broker:** É o servidor físico ou máquina virtual onde o Kafka está rodando. Um grupo de Brokers forma um "Cluster".
-* **Consumer Lag (Atraso):** Acontece quando o sistema que *produz* mensagens está enviando dados muito mais rápido do que o sistema que *lê* as mensagens consegue processar. Se o Lag subir muito, a arquitetura está sofrendo um gargalo.
+6. **Injeção de Dependências & Ciclo de Vida:**
+   * Demonstração prática dos hooks `ngOnInit()` e `ngOnDestroy()`, com botão para montar e desmontar dinamicamente um componente filho.
+   * Comunicação Filho → Pai via `@Output()` e `EventEmitter`.
+   * **Card Dinâmico de Logs:** Um serviço Singleton (`EventLoggerService`) que registra o histórico cronológico de cada evento ocorrido na aplicação.
 
 ---
 
-## 💻 Como Executar o Projeto Localmente
+## 💻 Como Executar Localmente
 
-**Pré-requisitos:**
-* [Node.js](https://nodejs.org/) instalado na máquina.
-* Angular CLI instalado globalmente.
+**Pré-requisitos:** Node.js (v18+) e NPM.
 
-**Passo a passo:**
-1. Clone ou baixe este repositório para a sua máquina.
-2. Abra o terminal na pasta raiz do projeto (`/dashboard-kafka`).
-3. Instale as dependências do projeto executando o comando:
+1. Acesse o diretório do projeto:
+   ```bash
+   cd projeto-seminario
+   ```
+2. Instale as dependências caso ainda não tenha feito:
    ```bash
    npm install
-
-   Inicie o servidor de desenvolvimento do Angular:
-    Bash
-
-    ng serve
-
-    Abra o seu navegador e acesse a URL:
-    Plaintext
-
-    http://localhost:4200
-
-(O Angular possui Hot-Reload nativo. Qualquer alteração feita e salva nos arquivos .ts, .html ou .css recarregará a página automaticamente).
+   ```
+3. Inicie o servidor local:
+   ```bash
+   npm start
+   ```
+4. Abra o navegador em:
+   ```text
+   http://localhost:4200
+   ```
+*(O Angular possui Hot-Reload nativo: qualquer arquivo alterado no VS Code atualiza a interface instantaneamente sem perder o estado).*

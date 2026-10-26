@@ -23,7 +23,7 @@ Para garantir que todos os 3 integrantes tenham protagonismo equilibrado, a carg
 | Integrante | Papel Principal | Responsabilidades Chave |
 | :--- | :--- | :--- |
 | **Membro 1 (Rodrigo)** | *Narrador Técnico & Teórico* | Introdução do seminário, contextualização histórica (AngularJS vs Angular 2+), posicionamento de mercado (vs React/Vue/Vanilla JS), vantagens corporativas e co-condução da conclusão. |
-| **Membro 2** | *Desenvolvedor Lead* | Preparação do ambiente (Node.js e Angular CLI), arquitetura de arquivos do projeto, codificação prática do componente *Dashboard Kafka*, explicação do TypeScript/HTML/CSS e execução do *Live Demo*. |
+| **Membro 2** | *Desenvolvedor Lead* | Preparação do ambiente (Node.js e Angular CLI), arquitetura de arquivos do projeto, codificação prática da SPA interativa (*Angular Interactive Showcase & Toolkit*), explicação do TypeScript/HTML/CSS e execução do *Live Demo*. |
 | **Membro 3** | *Designer & Relator* | Estruturação e design dos slides em PDF (tema escuro e visual limpo), boas práticas do Angular, controle do cronômetro de 30 minutos e encerramento com considerações finais. |
 
 > **Metodologia de Alinhamento:** *Daily Standups* diárias de 10 minutos para validação de bloqueios técnicos e passagem de bastão entre os tópicos.
@@ -49,11 +49,11 @@ A apresentação segue uma divisão estrita de 3 blocos de 10 minutos:
 | **05:00 - 08:00** | O Que É e Pilares (*Rodrigo*) | Framework *"Batteries Included"*, tipagem forte com TypeScript, Injeção de Dependências, Componentes e Data Binding. |
 | **08:00 - 10:00** | Mercado e Comparativo (*Rodrigo*) | Angular vs React vs Vue; Angular vs Vanilla JS; Casos de uso enterprise (Google, Microsoft, bancos). **Passagem de bastão para o Membro 2.** |
 | **10:00 - 12:00** | Setup e Estrutura (*Membro 2*) | Pré-requisitos (Node.js, NPM, Angular CLI), comandos de geração e anatomia dos arquivos (`src/app`, `angular.json`). |
-| **12:00 - 15:00** | Dissecando o Código (*Membro 2*) | Apresentação do componente prático (*Kafka Event Stream Dashboard*), ciclo de vida (`ngOnInit`/`ngOnDestroy`), interfaces e `@Component`. |
-| **15:00 - 18:00** | Live Demo (*Membro 2*) | Inicialização com `ng serve`, navegação no painel em execução, simulação de eventos em tempo real e rebalanceamento de cluster. |
-| **18:00 - 20:00** | Modificação ao Vivo (*Membro 2*) | Alteração rápida de uma variável ou estilo no VS Code evidenciando o *Hot Module Replacement (HMR)*. **Passagem de bastão para o Membro 3.** |
-| **20:00 - 23:00** | Design e Recursos (*Membro 3*) | Apresentação do design dos slides em PDF e ergonomia visual aplicada ao dashboard. |
-| **23:00 - 26:00** | Boas Práticas (*Membro 3*) | Performance, detecção de mudanças (*Change Detection*), compilação AOT (*Ahead-Of-Time*) e segurança contra XSS. |
+| **12:00 - 15:00** | Dissecando o Código (*Membro 2*) | Apresentação da SPA interativa autoexplicativa (*Angular Interactive Showcase*), módulos de Data Binding, Signals, Control Flow moderno (`@if`, `@for`, `@switch`), Pipes nativos e Injeção de Dependências. |
+| **15:00 - 18:00** | Live Demo (*Membro 2*) | Navegação no painel em execução, demonstração dos **Cards Dinâmicos** reagindo aos inputs, botões e calculadoras reativas com Signals em tempo real. |
+| **18:00 - 20:00** | Modificação ao Vivo (*Membro 2*) | Alteração rápida de uma variável ou estilo no VS Code evidenciando o *Hot Module Replacement (HMR)* e a atualização seletiva do DOM. **Passagem de bastão para o Membro 3.** |
+| **20:00 - 23:00** | Design e Recursos (*Membro 3*) | Apresentação do design dos slides em PDF e ergonomia visual aplicada aos cards dinâmicos do showcase. |
+| **23:00 - 26:00** | Boas Práticas (*Membro 3*) | Performance, detecção de mudanças cirúrgica com Signals, compilação AOT (*Ahead-Of-Time*) e segurança nativa contra XSS. |
 | **26:00 - 28:00** | Conclusão Técnica (*Grupo*) | Maiores facilidades vs maiores dificuldades encontradas; comparação declarativa vs imperativa com JS puro. |
 | **28:00 - 30:00** | Encerramento (*Grupo*) | Frase de impacto final, agradecimentos e abertura para perguntas do professor e dos colegas. |
 
@@ -71,7 +71,7 @@ Este roteiro serve como mapa mental para a fala inicial do Bloco 1.
 
 ### 4.2. O Que É vs. O Que NÃO É o Angular
 * **O que É:**
-  * Um framework web completo (*"Batteries Included"*): roteador, cliente HTTP, formulários reativos e ferramentas de teste já vêm nativos, sem necessidade de selecionar 20 bibliotecas de terceiros.
+  * Um framework web completo (*"Batteries Included"*): roteador, cliente HTTP, formulários reativos, pipes, injeção de dependência e ferramentas de teste já vêm nativos, sem necessidade de selecionar 20 bibliotecas de terceiros.
   * Um framework fortemente opinionado: impõe padrões de arquitetura corporativa para que qualquer equipe fale o mesmo idioma.
   * Uma plataforma voltada para aplicações de missão crítica e grande escala (SPAs, painéis administrativos, bancos).
 * **O que NÃO É:**
@@ -100,12 +100,12 @@ Este roteiro serve como mapa mental para a fala inicial do Bloco 1.
 ## 📝 5. Respostas Formais às 4 Partes do Seminário Acadêmico
 
 ### Parte 1 — Conhecendo a Tecnologia
-1. **O que é?** Framework web de código aberto, mantido pelo Google, baseado em componentes e tipagem estática.
-2. **Para que serve e quais problemas resolve?** Serve para a criação de Single Page Applications (SPAs) escaláveis. Resolve a fragmentação arquitetural, o código espaguete e a sobrecarga de manipulação manual do DOM.
+1. **O que é?** Framework web completo de código aberto mantido pelo Google, baseado em componentes, reatividade com Signals e tipagem estática com TypeScript.
+2. **Para que serve e quais problemas resolve?** Serve para a criação de Single Page Applications (SPAs) escaláveis e manuteníveis. Resolve a fragmentação arquitetural, o código espaguete e a sobrecarga de manipulação manual do DOM.
 3. **Quem criou e ano de lançamento?** Criado por Miško Hevery (Google). AngularJS em 2010; modernizado e reescrito como Angular em 2016.
-4. **Como evoluiu e onde é utilizada?** Evoluiu do modelo MVC legado para componentes reativos, compilação Ivy e Signals. Utilizada em plataformas bancárias, consoles de nuvem, ERPs e dashboards de telecom/logística.
+4. **Como evoluiu e onde é utilizada?** Evoluiu do modelo MVC legado para componentes reativos, compilação Ivy, Standalone Components e Signals de granularidade fina. Utilizada em plataformas bancárias, consoles de nuvem, ERPs e portais corporativos.
 5. **Vantagens e Limitações:**
-   * *Vantagens:* Tipagem estática robusta, injeção de dependências nativa, CLI poderosa e padronização corporativa.
+   * *Vantagens:* Tipagem estática robusta, injeção de dependências nativa, CLI poderosa, ecossistema tudo incluso e padronização corporativa.
    * *Limitações:* Curva de aprendizado inicial mais acentuada e tamanho de bundle base superior ao de micro-bibliotecas.
 
 ### Parte 2 — Preparando o Ambiente
@@ -121,32 +121,35 @@ Este roteiro serve como mapa mental para a fala inicial do Bloco 1.
    * Comando `ng serve` (disponibiliza localmente em `http://localhost:4200` com *Hot Reload*).
 
 ### Parte 3 — Colocando a Mão na Massa
-1. **Exemplo funcional escolhido:** *Kafka Event Stream Dashboard* (Painel de Monitoramento de Mensageria em Tempo Real), substituindo listas de tarefas simplórias por um caso prático com apelo corporativo.
-2. **Partes mais importantes do código:** O desacoplamento do componente `monitoramento-kafka`, contratos de dados (`interfaces`), simulação assíncrona controlada via `ngOnInit` e liberação de recursos em `ngOnDestroy`.
-3. **Modificação ao vivo:** Alteração de parâmetros de estilo ou valores dinâmicos de *lag* no TypeScript para demonstrar o reflexo imediato na interface sem recarregar a aba.
+1. **Exemplo funcional escolhido:** *Angular Interactive Showcase & Toolkit* (SPA Autoexplicativa com Cards Dinâmicos de Feedback). Em vez de uma regra de negócio externa desnecessária, a aplicação expõe diretamente os motores do Angular: Data Binding, Signals, Control Flow moderno, Pipes nativos, Formulários Reativos e Injeção de Dependências.
+2. **Partes mais importantes do código:** 
+   * A integração dos 4 tipos de Data Binding com reflexo em tempo real no DOM.
+   * A reatividade moderna com Signals (`signal()`, `computed()`) demonstrando cálculos cirúrgicos sem Zone.js.
+   * O fluxo estrutural declarativo moderno (`@if`, `@for`, `@switch`).
+   * A injeção de dependência via `EventLoggerService` e os hooks de ciclo de vida (`ngOnInit`, `ngOnDestroy`).
+3. **Modificação ao vivo:** Alteração de parâmetros de estilo, valores no TypeScript ou templates para demonstrar o reflexo imediato no navegador sem recarregar a aba (*Hot Module Replacement*).
 
 ### Parte 4 — Conclusão
-1. **Maior facilidade encontrada:** O ecossistema integrado da CLI (`ng generate`), que cria esqueletos de componentes e serviços com fiação correta e arquivos de teste instantaneamente.
-2. **Maior dificuldade encontrada:** A compreensão inicial do fluxo de ciclo de vida dos componentes e a adaptação às restrições de tipagem estrita do TypeScript.
-3. **Em que tipo de projeto a tecnologia é útil?** Dashboards analíticos de missão crítica, sistemas corporativos multi-equipe, portais de atendimento e aplicações que demandam ciclo de vida de vários anos.
-4. **O que muda em relação a HTML, CSS e JavaScript puros?** Passagem do modelo imperativo (manipulação linha a linha de elementos visuais) para o modelo reativo declarativo (a tela é consequência direta do estado dos dados).
+1. **Maior facilidade encontrada:** O ecossistema integrado da CLI (`ng generate`), a clareza do TypeScript e os blocos de fluxo de controle modernos (`@for`, `@if`), que eliminam a necessidade de configurações complexas de terceiros.
+2. **Maior dificuldade encontrada:** A compreensão inicial do fluxo de ciclo de vida dos componentes, a injeção de dependências e a transição do pensamento imperativo (JavaScript puro) para o reativo declarativo.
+3. **Em que tipo de projeto a tecnologia é útil?** Dashboards analíticos, sistemas corporativos multi-equipe, portais de autoatendimento, ERPs e aplicações de missão crítica com ciclo de vida de vários anos.
+4. **O que muda em relação a HTML, CSS e JavaScript puros?** Passagem do modelo imperativo (manipulação manual elemento a elemento via `document.getElementById`) para o modelo reativo declarativo (a interface é consequência direta e automática do estado dos dados).
 
 ---
 
 ## 📅 6. Checklist Semanal de Execução (TODO List)
 
-* [ ] **Dias 1 e 2 — Alinhamento de Base:**
+* [x] **Alinhamento de Base:**
   * Membro 1: Revisar e memorizar o roteiro narrativo do Bloco 1.
   * Membro 2: Garantir instalação do Node.js/CLI e validar o projeto funcional.
   * Membro 3: Definir o template visual dos slides (tema escuro, contraste para código).
-* [ ] **Dias 3 e 4 — Produção dos Artefatos:**
+* [x] **Produção dos Artefatos:**
   * Membro 1: Validar as respostas conceituais com os outros integrantes.
-  * Membro 2: Realizar testes práticos do *Dashboard Kafka* e validar a alteração ao vivo do Live Demo.
+  * Membro 2: Implementar o *Angular Interactive Showcase* com cards dinâmicos autoexplicativos e validar a alteração ao vivo do Live Demo.
   * Membro 3: Montar os slides com diagramas e blocos de código destacados (sem excesso de texto corrido).
-* [ ] **Dias 5 e 6 — Refinamento e Exportação:**
+* [ ] **Refinamento e Exportação:**
   * Membro 3: **Exportar os slides obrigatoriamente em formato PDF**.
   * Todos: Ensaio de passagem de bastão (garantir que as transições de fala durem menos de 15 segundos).
-* [ ] **Dia 7 — Ensaio Geral:**
+* [ ] **Ensaio Geral:**
   * Todos: Simulação completa com cronômetro para cravar exatamente 30 minutos.
   * Membro 2: Testar a execução do projeto em ambiente desconectado (modo offline/sem dependência de Wi-Fi da faculdade).
-
